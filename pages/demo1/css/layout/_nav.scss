@@ -1,0 +1,23 @@
+.nav {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.nav-open {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  cursor: pointer;
+
+  p {
+    margin-left: 5px;
+  }
+}

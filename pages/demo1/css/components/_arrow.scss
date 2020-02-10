@@ -1,0 +1,16 @@
+.arrow {
+  width: 100px;
+  height: 100px;
+
+  &:hover {
+    filter: invert(100%);
+  }
+}
+
+.arrow-left {
+  margin-right: auto;
+}
+
+.arrow-right {
+  margin-left: auto;
+}
