@@ -1,3 +1,80 @@
 .carousel {
-  display: none;
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+
+  &-img {
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    object-fit: cover;
+    transition: all 0.5s;
+
+    &--active {
+      z-index: 1;
+      width: 100vw !important;
+    }
+
+    &-previous {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+    }
+
+    &--fade-in-left {
+      animation: fadeInLeft 1s 0.7s;
+      animation-fill-mode: forwards;
+
+      @keyframes fadeInLeft {
+        to {
+          width: 100vw;
+        }
+      }
+    }
+
+    &--fade-out-right {
+      animation: fadeOutRight 1s 0.7s;
+      animation-fill-mode: forwards;
+
+      @keyframes fadeOutRight {
+        from {
+          width: 100vw;
+          right: 0;
+        }
+        to {
+          width: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &--fade-in-right {
+      animation: fadeInRight 0.7s;
+      animation-fill-mode: forwards;
+
+      @keyframes fadeInRight {
+        to {
+          width: 100vw;
+          right: 0;
+        }
+      }
+    }
+
+    &--fade-out-left {
+      animation: fadeOutLeft 0.7s;
+      animation-fill-mode: forwards;
+
+      @keyframes fadeOutLeft {
+        from {
+          width: 100vw;
+        }
+        to {
+          width: 0;
+        }
+      }
+    }
+  }
 }

@@ -39,9 +39,10 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
 }
 .header * {
-  z-index: 1;
+  z-index: 10;
 }
 
 .nav {
@@ -114,7 +115,8 @@
 
 .arrow {
   width: 100px;
-  height: 100px;
+  height: 100vh;
+  cursor: pointer;
 }
 .arrow:hover {
   filter: invert(100%);
@@ -129,5 +131,70 @@
 }
 
 .carousel {
-  display: none;
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.carousel-img {
+  position: absolute;
+  width: 0;
+  height: 100vh;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.carousel-img--active {
+  z-index: 1;
+  width: 100vw !important;
+}
+.carousel-img-previous {
+  left: 0;
+}
+.carousel-img-next {
+  right: 0;
+}
+.carousel-img--fade-in-left {
+  animation: fadeInLeft 1s 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInLeft {
+  to {
+    width: 100vw;
+  }
+}
+.carousel-img--fade-out-right {
+  animation: fadeOutRight 1s 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOutRight {
+  from {
+    width: 100vw;
+    right: 0;
+  }
+  to {
+    width: 0;
+    right: 0;
+  }
+}
+.carousel-img--fade-in-right {
+  animation: fadeInRight 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInRight {
+  to {
+    width: 100vw;
+    right: 0;
+  }
+}
+.carousel-img--fade-out-left {
+  animation: fadeOutLeft 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOutLeft {
+  from {
+    width: 100vw;
+  }
+  to {
+    width: 0;
+  }
 }
