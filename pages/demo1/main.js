@@ -13,15 +13,13 @@ function fadeInPreview(direction) {
   if (direction === "left") {
     carouselImg[checkEndOrBegin(activeImgIndex - 1)].style.width = "100px";
     carouselImg[checkEndOrBegin(activeImgIndex - 1)].style.zIndex = 2;
-    carouselImg[checkEndOrBegin(activeImgIndex - 1)].classList.add(
-      "carousel-img-previous"
-    );
+    carouselImg[checkEndOrBegin(activeImgIndex - 1)].className =
+      "carousel-img carousel-img-previous";
   } else {
     carouselImg[checkEndOrBegin(activeImgIndex + 1)].style.width = "100px";
     carouselImg[checkEndOrBegin(activeImgIndex + 1)].style.zIndex = 2;
-    carouselImg[checkEndOrBegin(activeImgIndex + 1)].classList.add(
-      "carousel-img-next"
-    );
+    carouselImg[checkEndOrBegin(activeImgIndex + 1)].className =
+      "carousel-img carousel-img-next";
   }
 }
 
@@ -42,6 +40,11 @@ arrowLeft.addEventListener("click", () => changeActiveImgLeft());
 arrowRight.addEventListener("click", () => changeActiveImgRight());
 
 function changeActiveImgLeft(direction) {
+  arrowLeft.removeEventListener("mouseover", () => {});
+  arrowRight.removeEventListener("mouseover", () => {});
+  arrowLeft.removeEventListener("mouseleave", () => {});
+  arrowRight.removeEventListener("mouseleave", () => {});
+
   carouselImg[checkEndOrBegin(activeImgIndex - 1)].classList.add(
     "carousel-img--fade-in-left"
   );
@@ -68,9 +71,21 @@ function changeActiveImgLeft(direction) {
       document.querySelector(".carousel-img--active")
     );
   }, 1700);
+
+  //   setTimeout(() => {
+  //     arrowLeft.addEventListener("mouseover", () => fadeInPreview("left"));
+  //     arrowRight.addEventListener("mouseover", () => fadeInPreview("right"));
+  //     arrowLeft.addEventListener("mouseleave", () => fadeOutPreview("left"));
+  //     arrowRight.addEventListener("mouseleave", () => fadeOutPreview("right"));
+  //   }, 2000);
 }
 
 function changeActiveImgRight(direction) {
+  arrowLeft.removeEventListener("mouseover", () => {});
+  arrowRight.removeEventListener("mouseover", () => {});
+  arrowLeft.removeEventListener("mouseleave", () => {});
+  arrowRight.removeEventListener("mouseleave", () => {});
+
   carouselImg[checkEndOrBegin(activeImgIndex + 1)].classList.add(
     "carousel-img--fade-in-right"
   );
@@ -96,6 +111,13 @@ function changeActiveImgRight(direction) {
       document.querySelector(".carousel-img--active")
     );
   }, 1700);
+
+  //   setTimeout(() => {
+  //     arrowLeft.addEventListener("mouseover", () => fadeInPreview("left"));
+  //     arrowRight.addEventListener("mouseover", () => fadeInPreview("right"));
+  //     arrowLeft.addEventListener("mouseleave", () => fadeOutPreview("left"));
+  //     arrowRight.addEventListener("mouseleave", () => fadeOutPreview("right"));
+  //   }, 2000);
 }
 
 function checkEndOrBegin(index) {
