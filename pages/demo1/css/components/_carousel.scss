@@ -25,7 +25,7 @@
     }
 
     &--fade-in-left {
-      animation: fadeInLeft 1s 0.7s;
+      animation: fadeInLeft 0.7s 0.5s;
       animation-fill-mode: forwards;
 
       @keyframes fadeInLeft {
@@ -36,7 +36,7 @@
     }
 
     &--fade-out-right {
-      animation: fadeOutRight 1s 0.7s;
+      animation: fadeOutRight 0.7s 0.5s;
       animation-fill-mode: forwards;
 
       @keyframes fadeOutRight {
@@ -52,10 +52,13 @@
     }
 
     &--fade-in-right {
-      animation: fadeInRight 0.7s;
+      animation: fadeInRight 0.7s 0.5s;
       animation-fill-mode: forwards;
 
       @keyframes fadeInRight {
+        from {
+          right: 0;
+        }
         to {
           width: 100vw;
           right: 0;
@@ -64,7 +67,7 @@
     }
 
     &--fade-out-left {
-      animation: fadeOutLeft 0.7s;
+      animation: fadeOutLeft 0.7s 0.5s;
       animation-fill-mode: forwards;
 
       @keyframes fadeOutLeft {
