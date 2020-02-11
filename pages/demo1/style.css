@@ -4,29 +4,8 @@
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 576px) {
-  html {
-    font-size: 8px;
-  }
-}
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1900px) {
-  html {
-    font-size: 20px;
-  }
-}
-
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .header {
@@ -51,21 +30,67 @@
   top: 0;
   left: 0;
   z-index: 9999;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+  transition: all 0.7s;
 }
 
-.nav-open {
+.nav-btn {
+  visibility: visible;
   position: relative;
   top: 10px;
-  left: 10px;
+  left: 15px;
   display: flex;
   align-items: center;
-  font-family: "Barlow", sans-serif;
   font-weight: 600;
   font-size: 30px;
   cursor: pointer;
+  align-self: flex-start;
 }
-.nav-open p {
+.nav-btn p {
   margin-left: 5px;
+}
+
+.nav-list {
+  position: relative;
+  background-color: #2b2421;
+  opacity: 0.9;
+  list-style: none;
+}
+.nav-list li {
+  text-align: center;
+  font-size: 28px;
+}
+.nav-list li:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+.nav-list li:not(:last-child) a {
+  display: block;
+  padding: 10px 35px;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.nav-list li:last-child {
+  position: absolute;
+  bottom: 200px;
+  padding: 10px 10px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav--closed {
+  visibility: hidden;
+  left: -178px;
+}
+
+.nav--opened {
+  visibility: visible;
+  left: 0;
 }
 
 .logo {

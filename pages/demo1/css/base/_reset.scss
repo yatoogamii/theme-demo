@@ -4,17 +4,17 @@
   box-sizing: border-box;
 }
 
-html {
-  @media screen and (min-width: $break-small) {
-    font-size: 8px;
-  }
-  @media screen and (min-width: $break-medium) {
-    font-size: 12px;
-  }
-  @media screen and (min-width: $break-large) {
-    font-size: 16px;
-  }
-  @media screen and (min-width: $break-mega) {
-    font-size: 20px;
-  }
-}
+// html {
+//   @media screen and (min-width: $break-small) {
+//     font-size: 8px;
+//   }
+//   @media screen and (min-width: $break-medium) {
+//     font-size: 12px;
+//   }
+//   @media screen and (min-width: $break-large) {
+//     font-size: 16px;
+//   }
+//   @media screen and (min-width: $break-mega) {
+//     font-size: 20px;
+//   }
+// }

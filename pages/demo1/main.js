@@ -1,3 +1,5 @@
+// CAROUSEL //
+
 const carouselImg = Array.from(document.querySelector(".carousel").children);
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
@@ -134,3 +136,23 @@ function checkEndOrBegin(index) {
     return index;
   }
 }
+
+// CAROUSEL //
+
+// NAVBAR //
+const navButtonOpen = document.querySelector(".nav-btn-open");
+const navButtonClose = document.querySelector(".nav-btn-close");
+const nav = document.querySelector(".nav");
+
+navButtonOpen.onclick = toggleNav;
+navButtonClose.onclick = toggleNav;
+
+function toggleNav() {
+  navButtonOpen.classList.toggle("hidden");
+  navButtonClose.classList.toggle("hidden");
+
+  nav.classList.toggle("nav--opened");
+  nav.classList.toggle("nav--closed");
+}
+
+// NAVBAR //
