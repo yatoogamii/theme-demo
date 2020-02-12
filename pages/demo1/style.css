@@ -165,7 +165,7 @@
   width: 0;
   height: 100vh;
   object-fit: cover;
-  transition: all 0.5s;
+  transition: width 0.5s;
 }
 .carousel-img--active {
   z-index: 1;
@@ -173,9 +173,11 @@
 }
 .carousel-img-previous {
   left: 0;
+  object-position: right;
 }
 .carousel-img-next {
   right: 0;
+  object-position: left;
 }
 .carousel-img--fade-in-left {
   animation: fadeInLeft 0.7s 0.5s;

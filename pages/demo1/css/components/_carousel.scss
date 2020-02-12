@@ -9,7 +9,7 @@
     width: 0;
     height: 100vh;
     object-fit: cover;
-    transition: all 0.5s;
+    transition: width 0.5s;
 
     &--active {
       z-index: 1;
@@ -18,10 +18,12 @@
 
     &-previous {
       left: 0;
+      object-position: right;
     }
 
     &-next {
       right: 0;
+      object-position: left;
     }
 
     &--fade-in-left {
