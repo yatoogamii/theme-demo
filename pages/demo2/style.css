@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  color: white;
+  background-image: url(images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header * {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 40px 80px 40px;
+}
+.nav-tool > li {
+  top: 0;
+  position: absolute;
+}
+.nav-tool h1 {
+  font-size: 30px;
+  font-family: "Overlock SC", cursive;
+  letter-spacing: 10px;
+}
+
+.nav-tool-search {
+  left: 0;
+  display: flex;
+  cursor: pointer;
+}
+.nav-tool-search input {
+  margin-left: 10px;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+.nav-tool-search input::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: 20px;
+}
+.nav-tool-search input:focus {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+  cursor: text;
+}
+.nav-tool-search input:focus::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-size: 20px;
+}
+
+.nav-tool-login {
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Dhurjati", sans-serif;
+}
+.nav-tool-login button {
+  margin-right: 30px;
+  background-color: transparent;
+  border: 0.5px solid white;
+  padding: 0 30px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: "Dhurjati", sans-serif;
+}
+.nav-tool-login .nav-tool-lang--active {
+  border-bottom: 1px solid white;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 100px;
+  padding: 0 80px 0 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+  font-family: "Dhurjati", sans-serif;
+  font-size: 25px;
+}
+.nav-link li {
+  width: 150px;
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 0 solid white;
+}
+.nav-link .nav-link--active {
+  font-weight: bold;
+}
+.nav-link .nav-link--active:before {
+  position: absolute;
+  content: "";
+  padding: 2px 50%;
+  bottom: -2px;
+  left: 0;
+  background-color: white;
+}
+
+.cta {
+  margin-top: 50vh;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-family: "Dhurjati", sans-serif;
+}
+.cta h2 {
+  font-family: "Overlock SC", cursive;
+  font-size: 60px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.cta p {
+  font-size: 20px;
+  letter-spacing: 5px;
+  padding: 0 420px;
+  margin-bottom: 20px;
+}
+.cta-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta-input input {
+  font-family: inherit;
+  height: 50px;
+  border: 0;
+  color: #acacce;
+  padding: 0 40px;
+  font-size: 22px;
+  border-radius: 20px 0 0 20px;
+}
+.cta-input button {
+  font-size: 22px;
+  font-family: inherit;
+  height: 50px;
+  border: 0;
+  color: white;
+  background-color: #3e51ff;
+  padding: 0 40px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}

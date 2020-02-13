@@ -10,13 +10,12 @@
 </head>
 
 <body>
-    <header>
-
-        <!-- first row -->
-        <div>
-            <ul>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <header class="header">
+        <!-- nav -->
+        <nav class="nav">
+            <ul class="nav-tool">
+                <li class="nav-tool-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
                         <path fill="none" d="M0 0h24v24H0z" />
                         <path
                             d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z"
@@ -27,37 +26,58 @@
                 <li>
                     <h1>PROFESSIONAL</h1>
                 </li>
-                <li>
+                <li class="nav-tool-login">
                     <button>LOGIN</button>
-                    <ul>
-                        <li>English</li>
-                        <li>French</li>
-                    </ul>
+                    <a href="#EN">
+                        <p class="nav-tool-lang--active">EN</p>
+                    </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 0 h1v24H12z" fill="rgba(255,255,255,1)" />
+                    </svg>
+                    <a href="#FR">
+                        <p>FR</p>
+                    </a>
                 </li>
             </ul>
-        </div>
-        <!-- first row -->
-
-        <!-- nav -->
-        <nav>
-            <ul>
-                <li>HOME</li>
-                <li>SAMPLE PAGE</li>
-                <li>OUR SERVICE</li>
-                <li>DEMO</li>
-                <li>CONTACT US</li>
+            <ul class="nav-link">
+                <a href="#HOME">
+                    <li class="nav-link--active">
+                        HOME
+                    </li>
+                </a>
+                <a href="#SAMPLE">
+                    <li>
+                        SAMPLE PAGE
+                    </li>
+                </a>
+                <a href="#OURSERVICE">
+                    <li>
+                        OUR SERVICE
+                    </li>
+                </a>
+                <a href="#DEMO">
+                    <li>
+                        DEMO
+                    </li>
+                </a>
+                <a href="#CONTACT">
+                    <li>
+                        CONTACT US
+                    </li>
+                </a>
             </ul>
         </nav>
         <!-- nav -->
 
 
+
         <!-- CTA -->
-        <div>
+        <div class="cta">
             <h2>LOREM IPSUM</h2>
             <p>Le Lorem Ipsum est simplement du faux texte employe dans la composition et la mise en page avant
                 impression</p>
-            <div>
-                <input type="text" name="mail" id="mail">
+            <div class="cta-input">
+                <input type="text" name="mail" id="mail" placeholder="YOUR EMAIL">
                 <button>GET START</button>
             </div>
         </div>
