@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 // html {
 //   @media screen and (min-width: $break-small) {
 //     font-size: 8px;
